@@ -5,7 +5,7 @@
 ![](images/fci-calculator.png)
 
 ## Technologies
-TBD 
+- Javascript
 
 ## Features 
 - Register: User log in options (ryan)
