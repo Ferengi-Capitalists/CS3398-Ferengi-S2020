@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+    
+<head>
+    <style>
+        .ActiveBuffer{
+            height: 100px;
+        }
+        .Hidden{
+            display: none;
+        }
+        .Collapseable{
+            width: 80%;
+        }
+    
+    </style>
+    <script>
+        function AddFirstUserInput(divLabel){
+            
+
+            var showhide = document.createElement("button");
+            showhide.setAttribute("type" , "Button");
+            showhide.setAttribute("id", "showhide");
+            showhide.setAttribute("Onclick", "Hide(" + '"' + divLabel + '")')
+            showhide.innerHTML=("Hide " + divLabel);            
+
+            divButtonParent = document.getElementById(divLabel +"Buttons");
+            divButtonParent.appendChild(showhide);
+
+            divButtonParent.firstElementChild.setAttribute("Onclick" , "AddUserInput(" + '"' +divLabel + '"'+ ")");
+
+            AddUserInput(divLabel);
+
+            
+            
+        }
+
+        function AddUserInput(divLabel){
+            var DivParent = document.getElementById(divLabel);
+            var DivChildCount = DivParent.childElementCount;
+
+            var SourceInputLabel = document.createElement("H3");
+                SourceInputLabel.innerHTML = divLabel + " " + (DivChildCount+1);
+
+            var AmountInputLabel = document.createElement("H4");
+                AmountInputLabel.innerHTML = "Amount:  ";
+            
+            var AmountInput = document.createElement("INPUT");
+                AmountInput.setAttribute("type" , "number");
+                AmountInput.setAttribute("id", divLabel + DivChildCount + "Amount");
+
+            AmountInputLabel.appendChild(AmountInput);
+
+            var NumberInputLabel = document.createElement("H4");
+                NumberInputLabel.innerHTML = "Title:  ";
+
+            var InputTitle = document.createElement("INPUT");
+                InputTitle.setAttribute("type", "text");
+                InputTitle.setAttribute("id" , divLabel + DivChildCount + "Title");
+
+            NumberInputLabel.appendChild(InputTitle);
+
+
+            var ChildDivLabel = divLabel + DivChildCount + "DIV";
+
+            var RecurringCheckboxLabel = document.createElement("H4")
+                RecurringCheckboxLabel.innerHTML = "Recurring: "
+
+            var RecurringCheckbox = document.createElement("INPUT");
+                RecurringCheckbox.setAttribute("type" , "checkbox");
+                RecurringCheckbox.setAttribute("id" , divLabel + DivChildCount + "Recurring");
+                RecurringCheckbox.setAttribute("onclick" , "SetRecurring(" +'"' + divLabel + '"' + ',' + '"' + ChildDivLabel + '"' + ')');
+
+            RecurringCheckboxLabel.appendChild(RecurringCheckbox);
+
+            var InputDiv = document.createElement("DIV");
+                InputDiv.setAttribute("id" , divLabel + DivChildCount + "DIV");
+
+            var RemoveButton = document.createElement("Button");
+                RemoveButton.setAttribute("type" , "Button");
+	            RemoveButton.setAttribute("id" , "Remove" + divLabel+ DivChildCount);
+	            RemoveButton.setAttribute("Onclick" , "RemoveStep(" + '"' + divLabel + '"' + "," + '"' + divLabel + DivChildCount + "DIV" + '"' + ")");
+	            RemoveButton.innerHTML = "Remove Source";
+
+            
+            InputDiv.appendChild(SourceInputLabel);
+            InputDiv.appendChild(NumberInputLabel);
+            InputDiv.appendChild(AmountInputLabel);
+            InputDiv.appendChild(RecurringCheckboxLabel);
+            InputDiv.appendChild(RemoveButton);
+            
+            DivParent.appendChild(InputDiv)
+
+            return;
+
+        }
+
+        function Hide(ElementToHide){
+	        	    
+		    document.getElementById(ElementToHide).className="Hidden";
+		    var button = document.getElementById(ElementToHide+"Buttons").lastElementChild;
+		    button.setAttribute("Onclick" , "Show("+ '"' + ElementToHide + '"' + ")");
+            button.innerHTML = "Show " + ElementToHide;
+        }        
+        function Show(ElementToShow){
+	        document.getElementById(ElementToShow).classList.remove("Hidden");
+        
+		    var button = document.getElementById(ElementToShow+"Buttons").lastElementChild;
+		    button.setAttribute("Onclick" , "Hide("+ '"' + ElementToShow + '"' + ")");
+            button.innerHTML = "Hide " + ElementToShow;
+        }
+
+        function RemoveStep (DivElementName , DivtoDelete){
+        console.log(DivElementName);
+        console.log(DivtoDelete);
+	        var element = document.getElementById(DivtoDelete);
+	        element.parentNode.removeChild(element);
+            var DivElement = document.getElementById(DivElementName);
+	        var NumberOfElements = DivElement.children.length;
+            console.log(NumberOfElements);
+	        while(NumberOfElements > 0){
+		        NumberOfElements--;
+		        var StepDIV = DivElement.children[NumberOfElements];
+                console.log(StepDIV);
+		        StepDIV.setAttribute("id" , DivElement.id + NumberOfElements + "DIV");
+                
+                STANDARD_ID = DivElement.id + NumberOfElements;
+                console.log(STANDARD_ID+ "hello");
+        
+                StepDIV.childNodes[0].innerHTML = DivElement.id + " " + (NumberOfElements+1);
+                StepDIV.childNodes[1].childNodes[1].setAttribute("id" , STANDARD_ID + "Title");
+                StepDIV.childNodes[2].childNodes[1].setAttribute("id" , STANDARD_ID + "Amount");
+                StepDIV.childNodes[3].childNodes[1].setAttribute("id" , STANDARD_ID + "Recurring");
+                StepDIV.childNodes[3].childNodes[1].setAttribute("onclick" , "SetRecurring(" + '"' + DivElement.id + '"' + ',' + '"' + STANDARD_ID + "DIV" + '"' + ')');
+                StepDIV.childNodes[4].setAttribute("id" , "Remove" + STANDARD_ID);
+		        StepDIV.childNodes[4].setAttribute("Onclick" , "RemoveStep(" + '"' + DivElement.id + '"' + "," + '"' + StepDIV.id + '"' + ")" );
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form id="NewProjection"action="CreateProjection.php" method="POST" enctype="multipart/form-data"></form>
+
+        <h2>Projection Name: <input id="ProjectionTitle" name="ProjectionTitle" type="text"></h2>
+        <h2>Revenue Sources:</h2>
+        <div id="Revenues">
+
+        </div>
+        <div id="RevenuesButtons">
+            <button type="button" name="RevenueAdder" id="RevenuesAdder" onclick="AddFirstUserInput('Revenues')">
+                Add Revenue
+            </button>
+        </div>
+
+        <h2>Expenses:</h2>
+
+        <div id="Expenses">
+
+        </div>
+
+        <div id="ExpensesButtons">
+            <button type="button" name="ExpensesAdder" id="ExpensesAdder" onclick="AddFirstUserInput('Expenses')">
+                Add Expense
+            </button>
+        </div>
+        
+
+    </form>
+
+</body>
+
+
+
+</html>
