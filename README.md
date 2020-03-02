@@ -8,7 +8,7 @@
 - Javascript
 
 ## Features 
-- Register: User log in options (ryan)
-- Budget Basics: Saves and calculates recurring incomes and expenses (scott)
-- Saver: Plan for future costs (scott)
-- Reminder: remind user about upcoming dates and se if they need to budget accordingly (shay)
+- Register: User log in options
+- Budget Basics: Saves and calculates recurring incomes and expenses 
+- Saver: Plan for future costs 
+- Reminder: remind user about upcoming dates and se if they need to budget accordingly 
