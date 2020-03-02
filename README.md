@@ -6,9 +6,12 @@
 
 ## Technologies
 - Javascript
+- Html
+- CSS
 
 ## Features 
 - Register: User log in options
 - Budget Basics: Saves and calculates recurring incomes and expenses 
 - Saver: Plan for future costs 
 - Reminder: remind user about upcoming dates and se if they need to budget accordingly 
+- Nav bar: make it easier for user to maneuver through the website
