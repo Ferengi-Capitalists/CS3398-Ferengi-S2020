@@ -22,6 +22,6 @@
 
 ## Team Features and Accomplishments
 - Alex & Shay: UXflowchart1.pdf - Flow chart to help visualize how a user will interact with the web app.
-- Courtney:
+- Courtney: Nav bar for easier maneuvering around the web app
 - Ryan: 
 - Scott: 
