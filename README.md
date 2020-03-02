@@ -19,3 +19,9 @@
 - Saver: Plan for future costs 
 - Reminder: remind user about upcoming dates and se if they need to budget accordingly 
 - Nav bar: make it easier for user to maneuver through the website
+
+## Team Features and Accomplishments
+- Alex & Shay: UXflowchart1.pdf - Flow chart to help visualize how a user will interact with the web app.
+- Courtney:
+- Ryan: 
+- Scott: 
