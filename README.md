@@ -5,6 +5,7 @@
 ## Status:
   - Alex: Currently learning what the code is doing. Next step is to build a profile page for the app. 
   - Courtney: Gaining a better understanding of Django
+  - Scott: Preparing for Sprint 2: Learning Django
   
 ## General Info 
 ![](images/fci-calculator.png)
