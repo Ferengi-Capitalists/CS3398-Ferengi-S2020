@@ -27,3 +27,14 @@
 - Courtney: Nav bar for easier maneuvering around the web app
 - Ryan: 
 - Scott: 
+website
+
+## Team improvements
+- Team: Utilize slack better and split up the coding into smaller sections so that more specific features 
+can be created faster.
+- Alex:
+- Shay: I need to have better communication that is earlier and more productive with my team.
+Also I need to speak up more about ideas or implementations that I am passionate about.
+- Courtney:
+- Ryan: 
+- Scott:
