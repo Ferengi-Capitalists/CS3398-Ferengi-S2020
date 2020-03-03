@@ -27,7 +27,7 @@
 - Alex & Shay: FC_Ferengi.pdf - Flow chart to help visualize how a user will interact with the web app.
 - Courtney: Nav bar for easier maneuvering around the web app
 - Ryan: Home page, databases for user logins.
-- Scott: Budget tab (adding recurring and nonrecurring incomes and expenses)
+- Scott: Budget tab (adding expenses and revenues with reactivity and an easy naming convention that allows for backend integration.
 website
 
 ## Team improvements
@@ -38,4 +38,4 @@ can be created faster.
 Also I need to speak up more about ideas or implementations that I am passionate about.
 - Courtney: Familiarization with web app dev
 - Ryan: Work better as a team in understanding the technology stack that we are developing on.
-- Scott:
+- Scott: As a team we could work together better by understanding what the team would like the end goal to be. In the first sprint it felt like there were seperate goals and motivations, in the second sprint I hope to work together as a team with a common goal of production.
