@@ -23,7 +23,7 @@
 - Nav bar: make it easier for user to maneuver through the website
 
 ## Team Features and Accomplishments
-- Alex & Shay: UXflowchart1.pdf - Flow chart to help visualize how a user will interact with the web app.
+- Alex & Shay: FC_Ferengi.pdf - Flow chart to help visualize how a user will interact with the web app.
 - Courtney: Nav bar for easier maneuvering around the web app
 - Ryan: 
 - Scott: 
