@@ -17,7 +17,11 @@
 - Python
 
 ## Features 
-- Register: User log in options
+- Register: Users can register accout
+- Login/Logout: Users can log out or in
+- Password Reset: Users can request a email to reset password
+- Profile: Users have a profile with an image, email and username
+- Post: Users can share posts on blog
 - Budget Basics: Saves and calculates recurring incomes and expenses 
 - Saver: Plan for future costs 
 - Reminder: remind user about upcoming dates and se if they need to budget accordingly 
