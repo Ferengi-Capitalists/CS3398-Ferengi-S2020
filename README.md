@@ -37,5 +37,5 @@ can be created faster.
 - Shay: I need to have better communication that is earlier and more productive with my team.
 Also I need to speak up more about ideas or implementations that I am passionate about.
 - Courtney: Familiarization with web app dev
-- Ryan: 
+- Ryan: Work better at a team in understanding the technology stack that we are developing on.
 - Scott:
