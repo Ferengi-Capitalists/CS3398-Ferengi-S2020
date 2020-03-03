@@ -26,7 +26,7 @@
 ## Team Features and Accomplishments
 - Alex & Shay: FC_Ferengi.pdf - Flow chart to help visualize how a user will interact with the web app.
 - Courtney: Nav bar for easier maneuvering around the web app
-- Ryan: Home page, databases for user logins
+- Ryan: Home page, databases for user logins.
 - Scott: Budget tab (adding recurring and nonrecurring incomes and expenses)
 website
 
