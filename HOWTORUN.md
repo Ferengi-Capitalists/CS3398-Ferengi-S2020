@@ -64,7 +64,7 @@ Example:
 
 `pip install django`
 
-`pip install requirements.txt`
+`pip install -r requirements.txt`
 
 ## Now run the project from  localhost:
 * now from the project folder:
