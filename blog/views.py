@@ -246,8 +246,6 @@ def report_view(request):
     context = locals()
     return render(request, 'blog/report.html', context=context)
 
-def goals(request):
-    return render(request, 'blog/about.html')
 
 def goal_entry(request):#, id = None):
     title1 = 'List of all goals entered'
