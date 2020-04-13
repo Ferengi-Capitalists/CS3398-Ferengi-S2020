@@ -253,3 +253,16 @@ class GenericExpense(DefaultExpenseModel):
 
     def tag_category(self):
         return f'{self.category}'
+class GoalType(models.Model):
+    goal_objective = models.CharField(max_length=300, blank=True)
+    goal_choice = (
+            ('Savings', 'Savings'),
+            ('Expenses', 'Expenses'), 
+            ('Debt', 'Debt')
+    )
+    goal_choice_type = models.CharField(max_length = 30, blank=True, null=True, choices=goal_choice)
+    goal_accomplished = models.BooleanField()
+
+    def _unicode_(self):
+        return self.goal_objective
+

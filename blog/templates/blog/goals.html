@@ -1,0 +1,44 @@
+{% extends "blog/base.html"%}
+{% block content %}
+<style>
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+</style>
+{{title1}}
+    <table border="2">
+      <tr>
+        <th>#</th>
+        <th>GOAL OBJECTIVE</th>
+        <th>GOAL TYPE</th>
+        <th>COMPLETED?</th>
+      </tr>
+      {% for instance in queryset %}
+      <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{instance.goal_objective}}</td>
+        <td>{{instance.goal_choice_type}}</td>
+        <td>{{instance.goal_accomplished}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+
+
+       {{title2}}
+      <form method="post" action="">
+              {% csrf_token %}
+              {{form.as_p}}
+              <input type="submit" value="Save" />
+      </form>
+
+{% endblock content %}

@@ -1,5 +1,14 @@
 from django.urls import path
 from .views import *
+from .views import (
+    PostListView, 
+    PostDetailView,
+    PostCreateView,
+    PostUpdateView,
+    PostDeleteView,
+    UserPostListView,
+    goal_entry,
+    )
 from . import views
 from django.contrib import admin
 
@@ -19,5 +28,5 @@ urlpatterns = [
     path('bills/', BillListView.as_view(), name='bills_view'),
     path('payroll/', PayrollListView.as_view(), name='payroll_view'),
     path('expenses/', ExpensesListView.as_view(), name='expenses_view'),
-    path('reports/', report_view, name='reports_view')
+    path('reports/', report_view, name='reports_view'),
 ]

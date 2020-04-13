@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.shortcuts import render
 from django.http import JsonResponse
 import requests
@@ -14,6 +14,10 @@ from django.views.generic import (
     TemplateView
 )
 from .models import *
+from .models import Post
+from .models import GoalType
+from .forms import GoalForm
+
 
 
 def home(request):
@@ -241,3 +245,31 @@ def report_view(request):
     currency = CURRENCY
     context = locals()
     return render(request, 'blog/report.html', context=context)
+
+def goals(request):
+    return render(request, 'blog/about.html')
+
+def goal_entry(request):#, id = None):
+    title1 = 'List of all goals entered'
+    queryset = GoalType.objects.all()
+    title2 = 'Add Goal'
+    form = GoalForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+
+    '''instance = get_list_or_404(GoalType, id=id )
+    form = GoalForm(request.POST or None, instance=instance)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        return redirect('/goals')'''
+
+    context = {
+        "title1":title1,
+        "queryset":queryset,
+        "title2": title2,
+        #"title": 'Edit ' + str(instance.goal_objectives),
+        #"instance": instance,
+        "form": form,
+    }
+    return render(request, "blog/goals.html",context)
