@@ -1,8 +1,10 @@
 from django.contrib import admin
 from .models import *
+from .models import GoalType
 
 # Register your models here.
 admin.site.register(Post)
+admin.site.register(GoalType)
 
 def action_paid(modeladmin, request, queryset):
     for ele in queryset:
@@ -72,8 +74,3 @@ class GenericExpenseAdmin(admin.ModelAdmin):
     search_fields = ['title', 'category__title']
     fields = ['category', 'date_expired', 'is_paid', 'final_value', 'title', 'payment_method']
     actions = [action_paid,]
-from .models import Post
-from .models import GoalType
-
-# Register your models here.
-admin.site.register(GoalType)
