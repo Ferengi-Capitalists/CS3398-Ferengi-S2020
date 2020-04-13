@@ -9,11 +9,11 @@ Sprint 1:
   - Scott: Preparing for Sprint 2: Learning Django
   
 Sprint 2:
-  -Alex:
-  -Courtney: Brainstorming ideas for next sprint (implementing nicer looking nav bar)
-  -Scott: Refactoring old code that no longer works with new added code
-  -Ryan: Debugging filters on budget graph app
-  -Shay: 
+  - Alex:
+  - Courtney: Brainstorming ideas for next sprint (implementing nicer looking nav bar)
+  - Scott: Refactoring old code that no longer works with new added code
+  - Ryan: Debugging filters on budget graph app
+  - Shay: 
   
 ## General Info 
 ![](images/fci-calculator.png)
@@ -62,6 +62,6 @@ Sprint 2:
   - Team:
   - Alex:
   - Shay:
-  - Courtney:
+  - Courtney: Better time management
   - Ryan:
   - Scott:
