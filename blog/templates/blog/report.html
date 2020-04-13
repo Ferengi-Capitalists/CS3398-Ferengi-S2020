@@ -104,13 +104,13 @@
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Bills", "Revenue", "Expenses", "Net", "Remaining"],
+                labels: ["Bills", "Revenue", "Expenses", "Net", "Net Loss"],
                 datasets: [{
                     label: 'Summary of Expense',
                     fill: false,
                     data: [-{{ bill_total_value }}, {{ payroll_total_value }},
                         -{{ expense_paid_value }}, ({{ payroll_total_value }} - {{ bill_total_value }} -
-                        {{ expense_paid_value }}), (-{{ bill_total_value }} -{{ expense_paid_value }})
+                        {{ expense_paid_value }}), (-{{ bill_total_value }} - {{ expense_paid_value }})
                     ],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
@@ -165,7 +165,7 @@
                     borderWidth: 1
                 },
                     {
-                        label: 'Payroll',
+                        label: 'Revenue',
                         fill: false,
                         borderColor: 'green',
                         data: [
