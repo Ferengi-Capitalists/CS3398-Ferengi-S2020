@@ -71,4 +71,4 @@ class GenericExpenseAdmin(admin.ModelAdmin):
     list_filter = ['category', 'is_paid', 'date_expired', 'payment_method']
     search_fields = ['title', 'category__title']
     fields = ['category', 'date_expired', 'is_paid', 'final_value', 'title', 'payment_method']
-    actions = [action_paid, ]
+    actions = [action_paid,]
