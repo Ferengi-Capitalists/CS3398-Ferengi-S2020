@@ -75,7 +75,7 @@
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td>Payroll</td>
+                        <td>Revenue</td>
                         <td>{{ payroll_total_value }} {{ currency }}</td>
                         <td>{{ payroll_diff }} {{ currency }}</td>
                     </tr>
@@ -104,12 +104,13 @@
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ["Bills", "Payroll", "Expenses", "Total", "Remaining"],
+                labels: ["Bills", "Revenue", "Expenses", "Net", "Remaining"],
                 datasets: [{
-                    label: '% of Expense',
+                    label: 'Summary of Expense',
                     fill: false,
-                    data: [{{ bill_total_value }}, {{ payroll_total_value }},
-                        {{ expense_paid_value }}, {{ totals.0 }}, {{ totals.2 }}
+                    data: [-{{ bill_total_value }}, {{ payroll_total_value }},
+                        -{{ expense_paid_value }}, ({{ payroll_total_value }} - {{ bill_total_value }} -
+                        {{ expense_paid_value }}), (-{{ bill_total_value }} -{{ expense_paid_value }})
                     ],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',

@@ -1,14 +1,5 @@
 from django.urls import path
 from .views import *
-from .views import (
-    PostListView, 
-    PostDetailView,
-    PostCreateView,
-    PostUpdateView,
-    PostDeleteView,
-    UserPostListView,
-    goal_entry,
-    )
 from . import views
 from django.contrib import admin
 
