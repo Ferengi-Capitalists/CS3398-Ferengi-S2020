@@ -1,0 +1,132 @@
+{% extends "blog/base.html"%}
+{% block content %}
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="{% url 'budget_view' %}">Options</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'bills_view' %}">Bills<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'payroll_view' %}">Revenue</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'expenses_view' %}">Expenses</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'reports_view' %}">Reports</a>
+              </li>
+          </ul>
+
+    </div>
+</nav>
+</body>
+<div class="container-fluid">
+    {% block container %}
+        <div class="row">
+            <h4>No Paid Invoices</h4>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4>Bills</h4>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Bill</th>
+                        <th scope="col">Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for bill in bills %}
+                      <tr>
+                          <th scope="row">1</th>
+                          <td>{{ bill.date_expired|date }}</td>
+                          <td>{{ bill.category }}</td>
+                          <td>{{ bill.tag_final_value }}</td>
+                      </tr>
+                  {% empty %}
+                      <tr>
+                          <td colspan="4">No data</td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+                <a href="admin/blog/bill/" class="btn btn-primary">Edit</a>
+            </div>
+            <div class="col">
+                <h4>Payroll</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Person - Category</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for bill in payroll %}
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>{{ bill.date_expired|date }}</td>
+                            <td>{{ bill.tag_category }}</td>
+                            <td>{{ bill.tag_final_value }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="4">No data</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <a href="/admin/blog/payroll/" class="btn btn-primary">Edit</a>
+            </div>
+            <div class="col">
+                <h4>Expense</h4>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for expense in expenses %}
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>{{ expense.date_expired|date }}</td>
+                            <td>{{ expense.category }}</td>
+                            <td>{{ expense.tag_final_value }}</td>
+                        </tr>
+                    {% empty %}
+                        <tr>
+                            <td colspan="4">No data</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                <a href="/admin/blog/genericexpense/" class="btn btn-primary">Edit</a>
+            </div>
+        </div>
+      {% endblock %}
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script>
+        $('.datepicker').datepicker();
+    </script>
+{% block extra_js %} {% endblock %}
+  </body>
+{% endblock content %}
