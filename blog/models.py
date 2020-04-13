@@ -17,9 +17,16 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk':self.pk})
 
-class Goal(models.Model): 
-	title = models.CharField(max_length= 10000)
-	content = models.TextField(blank=True, null=True)
-	amount = models.DecimalField(decimal_places=2, max_digits = 12)
-	date_posted = models.DateTimeField(default= timezone.now)
-	completed = models.BooleanField()
+class GoalType(models.Model):
+    goal_objective = models.CharField(max_length=300, blank=True)
+    goal_choice = (
+            ('Savings', 'Savings'),
+            ('Expenses', 'Expenses'), 
+            ('Debt', 'Debt')
+    )
+    goal_choice_type = models.CharField(max_length = 30, blank=True, null=True, choices=goal_choice)
+    goal_accomplished = models.BooleanField()
+
+    def _unicode_(self):
+        return self.goal_objective
+
