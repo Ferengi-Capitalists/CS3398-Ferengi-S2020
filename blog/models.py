@@ -17,3 +17,9 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('post-detail', kwargs={'pk':self.pk})
 
+class Goal(models.Model): 
+	title = models.CharField(max_length= 10000)
+	content = models.TextField(blank=True, null=True)
+	amount = models.DecimalField(decimal_places=2, max_digits = 12)
+	date_posted = models.DateTimeField(default= timezone.now)
+	completed = models.BooleanField()

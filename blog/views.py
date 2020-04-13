@@ -1,4 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
+from django.http import JsonResponse
+import requests
+import json
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.views.generic import (
@@ -9,6 +13,7 @@ from django.views.generic import (
     DeleteView
 )
 from .models import Post
+
 
 
 def home(request):
@@ -77,3 +82,13 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
+
+def menu(request):
+    return render(request, 'blog/dropmenu.html')
+
+def news(request):
+
+    news_api_request = requests.get("http://newsapi.org/v2/everything?q=bitcoin&from=2020-03-13&sortBy=publishedAt&apiKey=aee04ffc13154e69a54004c264ace2c7")
+    api = json.loads(news_api_request.content)
+
+    return render(request, 'blog/news.html', {'api': api})
