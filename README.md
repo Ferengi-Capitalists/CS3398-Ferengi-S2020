@@ -12,7 +12,7 @@ Sprint 2:
   - Alex:
   - Courtney: Brainstorming ideas for next sprint (implementing nicer looking nav bar)
   - Scott: Refactoring old code that no longer works with new added code
-  - Ryan: Debugging filters on budget graph app
+  - Ryan: Debugging filters on budget graph app.
   - Shay: 
   
 ## General Info 
@@ -43,7 +43,7 @@ Sprint 1:
 Sprint 2:
   - Alex:
   - Shay:
-  - Ryan:
+  - Ryan: We were able to learn django colectively and make a relational database with a view.
   - Scott: As a Team we were able to get together a working graph and budgeting section allowing for budgets to be seen visually instead of with numbers.
   - Courtney: Completed Django tutorial, more familiar with backend of app and how it communicates with the frontend
 
@@ -63,8 +63,8 @@ Sprint 2:
   - Alex:
   - Shay:
   - Courtney: Better time management
-  - Ryan:
-  - Scott: As a team we could work together better to not end up with the sunday hustle trying to get stuff done last minute.
+  - Ryan: We need to as a team better understand the relation ship between files to help in refactoring our code.
+  - Scott: As a team we could work together better to not end up with the last minute hustle.
   
 ## Retrospective
 Sprint2:
