@@ -9,7 +9,7 @@ Sprint 1:
   - Scott: Preparing for Sprint 2: Learning Django
   
 Sprint 2:
-  - Alex:
+  - Alex: Learn a little bit more about the django back end and practice html and css. 
   - Courtney: Brainstorming ideas for next sprint (implementing nicer looking nav bar)
   - Scott: Refactoring old code that no longer works with new added code
   - Ryan: Debugging filters on budget graph app.
@@ -41,7 +41,8 @@ Sprint 1:
   - Scott: Budget tab (adding expenses and revenues with reactivity and an easy naming convention that allows for backend integration.)
   
 Sprint 2:
-  - Alex:
+  - Alex: We were able to add a goal page where Users could save any goals they would like to accompish. We were also able to 
+  add a news page to display finance related articles. Currently displays anything bitcoin related. 
   - Shay:
   - Ryan: We were able to learn django colectively and make a relational database with a view.
   - Scott: As a Team we were able to get together a working graph and budgeting section allowing for budgets to be seen visually instead of with numbers.
@@ -60,7 +61,7 @@ Sprint 1:
   
 Sprint 2:
   - Team:
-  - Alex:
+  - Alex:Better time management and communication. 
   - Shay:
   - Courtney: Better time management
   - Ryan: We need to as a team better understand the relation ship between files to help in refactoring our code.
@@ -79,7 +80,7 @@ Sprint2:
       - Ryan: I was about to make an presentable about page, help visualize our databases with a bar graph.
       - Scott: I was able to get familiar with django and have a vision on how this will effect code from the first sprint.
       - Shay:
-      - Alex: 
+      - Alex: Learned enough about Django to add to current team app. 
       
   - What Might Be Impeding Us from Performing Better?
     - Team:
@@ -101,7 +102,7 @@ Sprint2:
       - Courtney: Time management. Switching to online classes has provided some benefits (like less time spent commuting) but,
         with the lack of a structured schedule each week, has opened the door for bad habits like poor time management and lack of               discipline.
       - Ryan: I need to improve my code readabilty and documentation of non-intuative functions. Communticate more thoroughly to not step on peolpes toes in the source.
-      - Alex: 
+      - Alex: Communicate more to better understand where everyone is at and not be afraid to ask for help. 
       - Shay:
       - Scott: I need to be more aware and accepting to the difficult to certain things. I assumed that it would be easy to change already written html and javascript into the python required for django but that was a much more difficult task than I thought.
 
