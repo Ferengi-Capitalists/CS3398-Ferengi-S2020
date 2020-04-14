@@ -76,7 +76,7 @@ Sprint2:
     - Individual:
       - Courtney: Created a practice Django app and become much more familiar with the backend and 
         frontend parts of the development process
-      - Ryan: I was about to make an presentable about page, help vidualize our databases.
+      - Ryan: I was about to make an presentable about page, help visualize our databases with a bar graph.
       - Scott: I was able to get familiar with django and have a vision on how this will effect code from the first sprint.
       - Shay:
       - Alex: 
@@ -100,7 +100,7 @@ Sprint2:
     - Individual:
       - Courtney: Time management. Switching to online classes has provided some benefits (like less time spent commuting) but,
         with the lack of a structured schedule each week, has opened the door for bad habits like poor time management and lack of               discipline.
-      - Ryan:
+      - Ryan: I need to improve my code readabilty and documentation of non-intuative functions. Communticate more thoroughly to not step on peolpes toes in the source.
       - Alex: 
       - Shay:
       - Scott: I need to be more aware and accepting to the difficult to certain things. I assumed that it would be easy to change already written html and javascript into the python required for django but that was a much more difficult task than I thought.
