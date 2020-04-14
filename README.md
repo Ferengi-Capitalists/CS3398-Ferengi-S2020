@@ -65,3 +65,42 @@ Sprint 2:
   - Courtney: Better time management
   - Ryan:
   - Scott:
+  
+## Retrospective
+Sprint2:
+  -What Went Well?
+    -Team:
+      -Everyone up to speed with Django
+      -Budget tab of app looks cleaner, more detailed; has more options
+      -All team members able to run app on local machine
+    -Individual:
+      -Courtney: Created a practice Django app and become much more familiar with the backend and 
+       frontend parts of the development process
+      -Ryan: 
+      -Scott: 
+      -Shay:
+      -Alex: 
+      
+  -What Might Be Impeding Us from Performing Better?
+    -Team:
+      -Vastly differing schedules and homes
+      -Overestimating our capabilities for each sprint (too many tasks)
+      -Poor communication
+      -Coronavirus
+      -Switching to online classes
+      
+  -What Can We do to Improve?
+    -Team:
+      -Communicate more frequently and with everyone
+      -Start earlier on tasks for the sprint
+      -Assign a more realistic number of tasks for the sprints
+      -Manage our time better
+      -Plan for features that are actually feasible
+      -Distribute the workload better among team members
+    -Individual:
+      -Courtney: Time management. Switching to online classes has provided some benefits (like less time spent commuting) but,
+       with the lack of a structured schedule each week, has opened the door for bad habits like poor time management and lack of              discipline.
+      -Ryan:.
+      -Alex: 
+      -Shay:
+
