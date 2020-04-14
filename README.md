@@ -76,7 +76,7 @@ Sprint2:
     - Individual:
       - Courtney: Created a practice Django app and become much more familiar with the backend and 
         frontend parts of the development process
-      - Ryan: 
+      - Ryan: I was about to make an presentable about page, help vidualize our databases.
       - Scott: I was able to get familiar with django and have a vision on how this will effect code from the first sprint.
       - Shay:
       - Alex: 
