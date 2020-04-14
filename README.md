@@ -44,7 +44,7 @@ Sprint 2:
   - Alex:
   - Shay:
   - Ryan:
-  - Scott:
+  - Scott: As a Team we were able to get together a working graph and budgeting section allowing for budgets to be seen visually instead of with numbers.
   - Courtney: Completed Django tutorial, more familiar with backend of app and how it communicates with the frontend
 
 ## Team improvements
@@ -64,7 +64,7 @@ Sprint 2:
   - Shay:
   - Courtney: Better time management
   - Ryan:
-  - Scott:
+  - Scott: As a team we could work together better to not end up with the sunday hustle trying to get stuff done last minute.
   
 ## Retrospective
 Sprint2:
@@ -77,7 +77,7 @@ Sprint2:
       - Courtney: Created a practice Django app and become much more familiar with the backend and 
         frontend parts of the development process
       - Ryan: 
-      - Scott: 
+      - Scott: I was able to get familiar with django and have a vision on how this will effect code from the first sprint.
       - Shay:
       - Alex: 
       
@@ -103,4 +103,5 @@ Sprint2:
       - Ryan:
       - Alex: 
       - Shay:
+      - Scott: I need to be more aware and accepting to the difficult to certain things. I assumed that it would be easy to change already written html and javascript into the python required for django but that was a much more difficult task than I thought.
 
