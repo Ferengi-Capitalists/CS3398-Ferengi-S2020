@@ -201,7 +201,7 @@ class Person(models.Model):
 
 
 class Payroll(DefaultExpenseModel):
-    person = models.ForeignKey(Person, null=True, on_delete=models.SET_NULL, related_name='person_payroll')
+    person = models.ForeignKey(User, null=True, on_delete=models.SET_NULL, related_name='person_payroll')
     category = models.ForeignKey(PayrollCategory, null=True, on_delete=models.SET_NULL, related_name='category_payroll')
 
     class Meta:
@@ -259,5 +259,15 @@ class GenericExpense(DefaultExpenseModel):
 
     def tag_category(self):
         return f'{self.category}'
+
+class GoalType(models.Model):
+    goal_objective = models.CharField(max_length=300, blank=True)
+    goal_choice = (
+            ('Savings', 'Savings'),
+            ('Expenses', 'Expenses'), 
+            ('Debt', 'Debt')
+    )
+    goal_choice_type = models.CharField(max_length = 30, blank=True, null=True, choices=goal_choice)
+    goal_accomplished = models.BooleanField()
 
 

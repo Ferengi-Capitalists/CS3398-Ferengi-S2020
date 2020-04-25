@@ -233,7 +233,7 @@ def report_view(request):
         bill_by_month.append(this_month_bills)
         payroll_by_month.append(this_month_expense)
         expenses_by_month.append(this_month_payroll)
-        totals_by_month.append([this_month_bills[0]+this_month_expense[0]+ this_month_payroll[0],
+        totals_by_month.append([this_month_bills[0] + this_month_expense[0] + this_month_payroll[0],
                                 this_month_bills[1] + this_month_expense[1] + this_month_payroll[1],
                                 this_month_bills[2] + this_month_expense[2] + this_month_payroll[2]
                                 ])
