@@ -13,8 +13,9 @@ urlpatterns = [
     path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('about/', views.about, name='blog-about'),
     path('goals/', views.goal_entry, name = 'goals'),
+    path('goals/<int:pk>/', views.goal_edit, name = 'goal_edit'),
+    path('goals/delete/<int:pk>/', views.delete_goal, name = 'goal_delete'),
     path('news/', views.news, name = 'news'),
-
     path('budget/', BudgetView.as_view(), name='budget_view'),
     path('bills/', BillListView.as_view(), name='bills_view'),
     path('payroll/', PayrollListView.as_view(), name='payroll_view'),

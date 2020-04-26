@@ -21,6 +21,8 @@ th {
         <th>GOAL OBJECTIVE</th>
         <th>GOAL TYPE</th>
         <th>COMPLETED?</th>
+        <th>UPDATE</th>
+        <th>REMOVE</th>
       </tr>
       {% for instance in queryset %}
       <tr>
@@ -28,6 +30,8 @@ th {
         <td>{{instance.goal_objective}}</td>
         <td>{{instance.goal_choice_type}}</td>
         <td>{{instance.goal_accomplished}}</td>
+        <td><a class="btn btn-sm btn-info" href="{% url 'goal_edit' instance.id %}">Update</a></td>
+        <td><a class="btn btn-sm btn-danger" href="{% url 'goal_delete' instance.id %}">Delete</a></td>
       </tr>
       {% endfor %}
     </table>

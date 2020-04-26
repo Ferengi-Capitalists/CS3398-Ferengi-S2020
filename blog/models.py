@@ -30,6 +30,10 @@ class GoalType(models.Model):
     def _unicode_(self):
         return self.goal_objective
 
+    def get_absolute_url(self):
+        return reverse("goal_edit", kwargs={"id": self.id})
+
+
 from django.db.models import Sum, F
 
 from .managers import GeneralManager
@@ -270,4 +274,6 @@ class GoalType(models.Model):
     goal_choice_type = models.CharField(max_length = 30, blank=True, null=True, choices=goal_choice)
     goal_accomplished = models.BooleanField()
 
+    def _str_(self):
+        return self.goal_objective
 

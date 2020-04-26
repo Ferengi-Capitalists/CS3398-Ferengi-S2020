@@ -1,0 +1,13 @@
+{% extends "blog/base.html"%}
+{% block content %}
+
+<p>Are you sure you want to delete "{{item.goal_objective}}"?</p>
+
+<form action="{% url 'goal_delete' item.id %}" method ="POST">
+
+	{% csrf_token %}
+	<a href="{% url 'goals' %}">Cancel</a>
+
+	<input type="submit" name="Confirm">
+</form>
+{% endblock %}

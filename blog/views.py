@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.http import JsonResponse
 import requests
 import json
@@ -246,8 +247,8 @@ def report_view(request):
     context = locals()
     return render(request, 'blog/report.html', context=context)
 
-
-def goal_entry(request):#, id = None):
+    
+def goal_entry(request):
     title1 = 'List of all goals entered'
     queryset = GoalType.objects.all()
     title2 = 'Add Goal'
@@ -255,19 +256,31 @@ def goal_entry(request):#, id = None):
     if form.is_valid():
         form.save()
 
-    '''instance = get_list_or_404(GoalType, id=id )
-    form = GoalForm(request.POST or None, instance=instance)
-    if form.is_valid():
-        instance = form.save(commit=False)
-        instance.save()
-        return redirect('/goals')'''
-
     context = {
         "title1":title1,
         "queryset":queryset,
         "title2": title2,
-        #"title": 'Edit ' + str(instance.goal_objectives),
-        #"instance": instance,
         "form": form,
-    }
+        }
     return render(request, "blog/goals.html",context)
+
+
+def goal_edit(request, pk):
+    goal = GoalType.objects.get(id=pk)
+    form = GoalForm(instance=goal)
+
+    if request.method == 'POST':
+        form = GoalForm(request.POST, instance=goal)
+        if form.is_valid():
+            form.save()
+            return redirect('/goals/')
+    context = {'form':form}
+    return render(request, 'blog/goal_edit.html', context)
+
+def delete_goal(request, pk):
+    goal = GoalType.objects.get(id=pk)
+    if request.method == "POST":
+        goal.delete()
+        return redirect('/goals/')
+    context = {'item': goal}
+    return render(request, 'blog/delete.html', context)
