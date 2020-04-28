@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
+
     {% if title %}
         <title>Budget-Blog - {{ title }}</title>
     {% else %}
@@ -37,7 +38,7 @@
                 <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>
                 <a class="nav-item nav-link" href="{% url 'budget_view' %}">Access Budget</a>
                 <a class="nav-item nav-link" href="{% url 'goals' %}">Goals</a>
- 		            <a class="nav-item nav-link" href="{% url 'news' %}">Finance News</a>
+                <a class="nav-item nav-link" href="{% url 'news' %}">Finance News</a>
                 <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
               {% else %}
@@ -51,39 +52,55 @@
     </header>
     <main role="main" class="container">
       <div class="row">
-        <div class="col-md-8">
-          {% if messages %}
-            {% for message in messages %}
-              <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-              </div>
-            {% endfor %}
-          {% endif %}
+        <div class="col-md-14">
+
           {% block content %}{% endblock %}
         <div class ="container">
-		<div class="row">
+    <div class="row">
 
-	{% for x in api.articles %}
-	<div class="col-sm">
-		<div class="card" style="width: 18rem;">
-		  	<img src="{{x.urlToImage}}" class="card-img-top" alt="{{x.source.name}}">
-		  	<div class="card-body">
-		    	<h5 class="card-title">{{x.title}}</h5>
-		    	<p class="card-text">{{x.description| truncatechars:150}}</p>
-		    	<a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
-		  	</div>
-		</div>
-		<br>
-	</div>
-		{%endfor%}
+  {% for x in api.articles %}
+  <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+        <img src="{{x.urlToImage}}" class="card-img-top" alt="{{x.source.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{x.title}}</h5>
+          <p class="card-text">{{x.description| truncatechars:150}}</p>
+          <a href="{{x.url}}" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+    </div>
+    <br>
+  </div>
+    {%endfor%}
 </div>
 </div>
     </main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
+    <script type="text/javascript">
+            var options = {
+        bottom: '64px', // default: '32px'
+        right: 'unset', // default: '32px'
+        left: '32px', // default: 'unset'
+        time: '0.5s', // default: '0.3s'
+        mixColor: '#fff', // default: '#fff'
+        backgroundColor: '#fff',  // default: '#fff'
+        buttonColorDark: '#100f2c',  // default: '#100f2c'
+        buttonColorLight: '#fff', // default: '#fff'
+        saveInCookies: false, // default: true,
+        label: '🌓', // default: ''
+        autoMatchOsTheme: true // default: true
+      }
+
+      const darkmode = new Darkmode(options);
+      darkmode.showWidget();
+
+
+
+    </script>
 </body>
 </html>

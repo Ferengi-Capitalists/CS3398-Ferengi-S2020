@@ -1,7 +1,11 @@
-body {
+  body {
     background: #fafafa;
     color: #333333;
     margin-top: 5rem;
+  }
+
+  .darkmode--activated main{
+    color: white;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -27,6 +31,11 @@ body {
   .site-header .navbar-nav .nav-link.active {
     font-weight: 500;
   }
+
+  .darkmode--activated .content-section{
+    background: black;
+  }
+   
   
   .content-section {
     background: #ffffff;
@@ -35,16 +44,24 @@ body {
     border-radius: 3px;
     margin-bottom: 20px;
   }
+
+  .darkmode--activated .article-title{
+    color: white;
+  }
+   
   
   .article-title {
     color: #444444;
   }
-  
+
   a.article-title:hover {
     color: #428bca;
     text-decoration: none;
   }
   
+  .darkmode--activated .article-content{
+    color: white;
+  }
   .article-content {
     white-space: pre-line;
   }

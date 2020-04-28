@@ -91,13 +91,6 @@ def about(request):
 def menu(request):
     return render(request, 'blog/dropmenu.html')
 
-def news(request):
-
-    news_api_request = requests.get("http://newsapi.org/v2/everything?q=bitcoin&from=2020-03-13&sortBy=publishedAt&apiKey=aee04ffc13154e69a54004c264ace2c7")
-    api = json.loads(news_api_request.content)
-
-    return render(request, 'blog/news.html', {'api': api})
-
 from django.db.models.functions import TruncMonth, TruncYear
 from django.conf import settings
 
@@ -284,3 +277,10 @@ def delete_goal(request, pk):
         return redirect('/goals/')
     context = {'item': goal}
     return render(request, 'blog/delete.html', context)
+
+def news(request):
+
+    news_api_request = requests.get("http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=aee04ffc13154e69a54004c264ace2c7")
+    api = json.loads(news_api_request.content)
+
+    return render(request, 'blog/news.html', {'api': api})
