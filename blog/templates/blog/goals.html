@@ -1,6 +1,7 @@
 {% extends "blog/base.html"%}
 {% block content %}
 <style>
+
 table, td, th {
   border: 1px solid black;
 }
@@ -12,6 +13,10 @@ table {
 
 th {
   text-align: left;
+}
+
+.darkmode--activated table, td, th {
+    border: 1px solid grey;
 }
 </style>
 {{title1}}
