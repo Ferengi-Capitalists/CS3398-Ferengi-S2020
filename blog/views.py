@@ -27,6 +27,9 @@ def home(request):
     }
     return render(request, 'blog/home.html', context)
 
+def user_support(request):
+    return render(request, 'blog/user_support.html', {'title': 'Support'})  
+
 class PostListView(ListView):
     model = Post
     template_name = 'blog/home.html' # <app>/<model>_<viewtype>.html
@@ -90,6 +93,8 @@ def about(request):
 
 def menu(request):
     return render(request, 'blog/dropmenu.html')
+
+   
 
 from django.db.models.functions import TruncMonth, TruncYear
 from django.conf import settings

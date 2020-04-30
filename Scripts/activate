@@ -46,7 +46,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV='C:\Users\agx32\OneDrive\Documents\GitHub\CS3398-Ferengi-S2020'
+VIRTUAL_ENV='C:\Users\coalb\Desktop\GitHub\CS3398-Ferengi-S2020'
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

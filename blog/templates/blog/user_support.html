@@ -1,0 +1,160 @@
+{% extends "blog/base.html"%}
+{% block content %}
+<head>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+-->
+</head>
+
+<header class="bg-info text-center py-2 mb-5">
+    <div class="container bg-info">
+      <h1 class="font-weight-normal text-white">User Support: We're Here for You!</h1>
+    </div>
+  </header>
+
+<div class="container">
+    <div class="row">
+        <div class="container bg-dark">
+            <h1 class="font-weight-light text-white">
+        <div class="col">Frequently Asked Questions</div></h1>
+        </div>
+    </div>
+</div><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center text-dark">
+                <div id="accordion">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link text-info" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Can I upload a profile picture?
+                          </button>
+                        </h5>
+                      </div>
+                  
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                          Of course! <br> Simply navigate to your profile page (on the right of the above nagivation bar), click on the "Choose file" button, and select the desired picture 
+                          from your desktop. It's as easy as that!
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed text-info" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Can I delete an expense or revenue entry from my budget?
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                          Absolutely! <br> Click on the "Access Budget" link above. From the "Options" tab, you can click the "Edit" button under the bill, revenue or expense you would like 
+                          to remove. Then, check the box next to each entry you would like to delete, select the delete option from the "Action" drop-down menu, and click "Go".
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed text-info" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How do I change my password?
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                          -If you've forgotten your password and cannot access your account, you can click the "Forgot Password?" link on the Log In page. From there you will need to enter the 
+                          email address associated with the account and then click the "Request Password Reset" button.<br><br>-If you would just like to change your password, navigate to the 
+                          "Access Budget" page and click any of the "Edit" buttons. At the top of the screen you should see a "Change Password" link. After clicking on it, you will be
+                          required to enter your old password as well as the new one.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+<br><br><br><br><br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="container bg-dark mb-4">
+            <h1 class="font-weight-light text-white">
+        <div class="col">Contact Us</div></h1>
+        </div>
+    </div>
+    Got a question you don't see the answer to? Shoot one of our team members an email and we'll get back to you as soon as possible.
+</div><br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header text-light bg-secondary">
+                      Ryan Franklin
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Junior Web Developer</li>
+                      <li class="list-group-item">rafman121@gmail.com</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header text-light bg-secondary">
+                      Scott Polmanteer
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Database Architect</li>
+                      <li class="list-group-item">sjp94@txstate.edu</li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div><br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header text-light bg-secondary">
+                      Alejandra Gonzalez
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Backend Developer</li>
+                      <li class="list-group-item">a_g32@txstate.edu</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header text-light bg-secondary">
+                      Shaina Rae N Ott
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Tech Lead</li>
+                      <li class="list-group-item">sno7@txstate.edu</li>
+                    </ul>
+                  </div>
+            </div>
+        </div> 
+    </div><br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header text-light bg-secondary">
+                      Courtney Battle
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Lead Web Developer</li>
+                      <li class="list-group-item">cab455@txstate.edu</li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+  
+
+
+{% endblock content %}  

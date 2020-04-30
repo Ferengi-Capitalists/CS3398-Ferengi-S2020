@@ -21,4 +21,5 @@ urlpatterns = [
     path('payroll/', PayrollListView.as_view(), name='payroll_view'),
     path('expenses/', ExpensesListView.as_view(), name='expenses_view'),
     path('reports/', report_view, name='reports_view'),
+    path('user_support/', views.user_support, name = 'user_support')
 ]
