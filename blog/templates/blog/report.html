@@ -5,12 +5,7 @@
     <div class="row">
         <h2 class="center">Reports</h2>
     </div>
-        <br>
-    <div class="row">
-        <label class="badge badge-pill badge-primary">Total Value {{ totals.0 }} {{ currency }}</label>
-        <label class="badge badge-pill badge-success">Paid Value {{ totals.1 }} {{ currency }}</label>
-        <label class="badge badge-pill badge-warning">Remaining Value {{ totals.2 }} {{ currency }}</label>
-    </div>
+
     <div class="row">
         <div class="col-16"><canvas id="myChart" width="400" height="300"></canvas></div>
         <div class="col-8"><canvas id="myChart0" width="400" height="300"></canvas></div>
@@ -192,6 +187,8 @@
                             {% endfor %}
                         ]
                     },
+
+                    /*
                     {
                         label: 'Total',
                         fill: false,
@@ -206,6 +203,7 @@
                             {% endfor %}
                         ]
                     }
+                    */
                 ]
             },
             options: {
