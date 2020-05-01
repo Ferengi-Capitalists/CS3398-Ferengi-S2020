@@ -5,6 +5,9 @@ from django.contrib import admin
 
 urlpatterns = [
     path('budget/admin/', admin.site.urls),
+    path('bills/admin/', admin.site.urls),
+    path('payroll/admin/', admin.site.urls),
+    path('payroll/admin/' , admin.site.urls),
     path('', PostListView.as_view(), name='blog-home'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
