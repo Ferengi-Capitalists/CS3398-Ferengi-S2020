@@ -133,6 +133,7 @@ class BillListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(BillListView, self).get_context_data(**kwargs)
         page_title = 'Bills List'
+        link_to_edit = 'href= admin/blog/bill/'
         categories = BillCategory.objects.all()
         search_name, cate_name, paid_name = [self.request.GET.get('search_name', None),
                                              self.request.GET.getlist('cate_name', None),
@@ -157,6 +158,7 @@ class PayrollListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(PayrollListView, self).get_context_data(**kwargs)
         page_title = 'Revenue List'
+        link_to_edit = 'href="/admin/blog/payroll/"'
         categories = PayrollCategory.objects.all()
         persons = Person.objects.all()
         search_name, cate_name, paid_name, person_name = [self.request.GET.get('search_name', None),
@@ -183,6 +185,7 @@ class ExpensesListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(ExpensesListView, self).get_context_data(**kwargs)
         page_title = 'Expenses List'
+        link_to_edit = 'href="/admin/blog/genericexpense/"'
         categories = GenericExpenseCategory.objects.all()
         search_name, cate_name, paid_name = [self.request.GET.get('search_name', None),
                                              self.request.GET.getlist('cate_name', None),
