@@ -6,11 +6,6 @@
         <h2 class="center">{{ page_title }}</h2>
     </div>
         <br>
-    <div class="row">
-        <label class="badge badge-pill badge-primary">Total Value {{ total_value }} {{ currency }}</label>
-        <label class="badge badge-pill badge-success">Paid Value {{ paid_value }} {{ currency }}</label>
-        <label class="badge badge-pill badge-warning">Remaining Value {{ diff }} {{ currency }}</label>
-    </div>
 
     <div class="row">
         <div class="col-8">
@@ -39,6 +34,7 @@
                     {% endfor %}
                 </tbody>
             </table>
+            <a {{ link_to_edit }} class="btn btn-primary">Edit</a>
         </div>
         <div class="col-8">
             <h4>Analysis</h4>
